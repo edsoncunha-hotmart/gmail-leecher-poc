@@ -11,6 +11,6 @@ Os passos essenciais para isso são os seguintes:
     - Cadastrar um tópico no Google Pub/Sub: https://console.cloud.google.com/cloudpubsub/topic/detail/gmail-notifications?folder=&organizationId=&project=adspoc-1577964557930
     - Permitir que a conta de serviço do GMail (gmail-api-push@system.gserviceaccount.com) gere notificações nesse tópico 
     - Criar uma inscrição no tópico, do tipo PUSH, que fará POST em uma determinada URL: https://console.cloud.google.com/cloudpubsub/subscription/detail/gmail-webhook?folder=&organizationId=&project=adspoc-1577964557930
-2. Colocar no ar a URL configurada no passo 1: https://raw.githubusercontent.com/Hotmart-Org/api-ads/master/google/src/main/kotlin/com/hotmart/ads/google/rest/MailNotificationsController.kt
+2. Colocar no ar a URL configurada no passo 1: https://github.com/Hotmart-Org/api-ads/raw/master/google/src/main/kotlin/com/hotmart/ads/google/rest/MailNotificationsController.kt
 3. Converter o conteúdo da notificação e a partir dele, recuperar o conteúdo HTML do e-mail, como demonstrado no arquivo [GmailLeecherApplication.kt](src/main/kotlin/com/hotmart/pocs/gmailleecher/GmailLeecherApplication.kt)
 4. Com base no conteúdo do e-mail, gerar eventos para a aplicação, de modo que ela atualize as campanhas.
