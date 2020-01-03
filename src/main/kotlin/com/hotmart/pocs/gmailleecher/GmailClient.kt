@@ -79,10 +79,9 @@ object GmailClient {
                 .history()
                 .list(userId)
                 .setStartHistoryId(startHistoryId)
-                .setHistoryTypes(listOf("messageAdded"))
                 .execute()
 
-        return response.history.first().messagesAdded.first().message.id
+        return response.history.first().messages.first().id
     }
 }
 
